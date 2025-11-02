@@ -1,0 +1,14 @@
+# GET (not found)
+curl -v http://127.0.0.1:3000/200
+
+# PUT
+curl -X PUT --data-binary "@cat.jpg" http://127.0.0.1:3000/200
+
+# GET (cached)
+curl http://127.0.0.1:3000/200 --output test.jpg
+
+# DELETE
+curl -X DELETE http://127.0.0.1:3000/200
+
+# GET (after delete)
+curl -v http://127.0.0.1:3000/200
